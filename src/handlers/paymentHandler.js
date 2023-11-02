@@ -15,7 +15,7 @@ const successHandler = async (req, res) => {
         const info = req.query;
         const infoJSON = JSON.stringify(info);
 
-        res.status(200).redirect(`https://frontend-ladyfitlovers.vercel.app/paymentState/?data=${encodeURIComponent(infoJSON)}`);
+        res.status(200).redirect(`https://front-vercel-lady.vercel.app/paymentState/?data=${encodeURIComponent(infoJSON)}`);
         // res.status(200).redirect(`http://localhost:5173/paymentState/?data=${encodeURIComponent(infoJSON)}`);
     } catch (error) {
         res.status(404).json({ error: error.message })
@@ -26,7 +26,7 @@ const failureHandler = async (req, res) => {
         const info = req.query;
         const infoJSON = JSON.stringify(info);
 
-        res.status(200).redirect(`https://frontend-ladyfitlovers.vercel.app/paymentState/?data=${encodeURIComponent(infoJSON)}`);
+        res.status(200).redirect(`https://front-vercel-lady.vercel.app/paymentState/?data=${encodeURIComponent(infoJSON)}`);
 
         // res.status(200).redirect(`http://localhost:5173/paymentState/?data=${encodeURIComponent(infoJSON)}`);
     } catch (error) {
@@ -38,7 +38,7 @@ const pendingHandler = async (req, res) => {
         const info = req.query;
         const infoJSON = JSON.stringify(info);
 
-        res.status(200).redirect(`https://frontend-ladyfitlovers.vercel.app/paymentState/?data=${encodeURIComponent(infoJSON)}`);
+        res.status(200).redirect(`https://front-vercel-lady.vercel.app/paymentState/?data=${encodeURIComponent(infoJSON)}`);
         // res.status(200).redirect(`http://localhost:5173/paymentState/?data=${encodeURIComponent(infoJSON)}`);
     } catch (error) {
         res.status(404).json({ error: error.message })
