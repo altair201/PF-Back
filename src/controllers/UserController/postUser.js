@@ -1,8 +1,9 @@
 const { User, Cart } = require('../../db')
 const bcrypt = require("bcryptjs");
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const mailUserCreated = require('../../config/mailUserCreated');
 const { JWT_SECRET } = process.env;
-const mailUserCreated = require('../../helpers/mailUserCreated')
+
 
 const postUser = async ({ name, surname, email, phone, password, address, typeUser }) => {
   if (!(name || surname || email || password)) throw Error("Required data is missing. Please provide name, surname, email, and password.")
